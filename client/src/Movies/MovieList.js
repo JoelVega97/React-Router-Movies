@@ -8,9 +8,11 @@ const MovieList = props => {
     <div className="movie-list">
       {list.map(movie => (
         <MovieDetails key={movie.id} movie={movie} />
-      ))}
+        ))}
     </div>
   );
+
+  
 }
 
 
@@ -19,9 +21,7 @@ const MovieList = props => {
 function MovieDetails({ movie }) {  
   const { title, director, metascore } = movie;
   const {url} = useRouteMatch()
-
   const history = useHistory()
-
   const movieClick = () => {
     history.push('/movies')
   }

@@ -34,10 +34,10 @@ const App = () => {
       <Switch>
 
         <Route path = '/movies/:id'>
-          <Movie />
+          <Movie list = {movieList} />
         </Route>
 
-        <Route path = '/'>
+        <Route path = '/movies'>
           <MovieList  list = {movieList}/>
         </Route>
 
